@@ -3,26 +3,37 @@ package ba.unsa.etf;
 public class Predmet {
     private Student[] studenti = null;
 
-    private int curr = 0;
     private String nazivPredmeta;
     private int sifraPredmeta;
     private int maxStudenata;
+    private int size; = 0
 
     public Predmet(String naziv, int sifra, int max) {
         nazivPredmeta = naziv;
         sifraPredmeta = sifra;
         maxStudenata = max;
+        size = 0;
         studenti = new Student[maxStudenata];
     }
 
     public void upisi(Student s){
-        if(curr < studenti.length) {
-            studenti[curr] = s;
-            curr++;
+        if(size < maxStudenata) {
+            studenti[size] = s;
+            size++;
         }
     }
 
     public void ispisi(Student s){
+        int idx = 0;
+        for(int idx = 0; idx < size; idx++) {
+            if(studenti[idx] == s)
+                break;
+        }
+
+        for(int i = idx; i < size-1; i++) {
+            studenti[i] = studenti[i+1];
+        }
+        studenti[size-1] = null;
 
     }
 
