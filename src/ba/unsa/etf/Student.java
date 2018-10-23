@@ -13,7 +13,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return ime + " " + prezime + " (" + index + ")";
+        return prezime + " " + ime + " (" + index + ")";
     }
 
     public String getIme() {

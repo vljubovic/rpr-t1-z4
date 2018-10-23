@@ -6,7 +6,7 @@ public class Predmet {
     private String nazivPredmeta;
     private int sifraPredmeta;
     private int maxStudenata;
-    private int size; = 0
+    private int size = 0;
 
     public Predmet(String naziv, int sifra, int max) {
         nazivPredmeta = naziv;
@@ -25,7 +25,7 @@ public class Predmet {
 
     public void ispisi(Student s){
         int idx = 0;
-        for(int idx = 0; idx < size; idx++) {
+        for(idx = 0; idx < size; idx++) {
             if(studenti[idx] == s)
                 break;
         }
@@ -34,7 +34,18 @@ public class Predmet {
             studenti[i] = studenti[i+1];
         }
         studenti[size-1] = null;
+        size--;
+    }
 
+    @Override
+    public String toString() {
+        String s = "";
+
+        for(int i = 0; i < size; i++) {
+            s += i + ". " + studenti[i] + "\n";
+        }
+
+        return s;
     }
 
     public String getNazivPredmeta() {
