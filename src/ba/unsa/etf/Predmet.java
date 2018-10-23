@@ -42,7 +42,7 @@ public class Predmet {
         String s = "";
 
         for(int i = 0; i < size; i++) {
-            s += i + ". " + studenti[i] + "\n";
+            s += (i+1) + ". " + studenti[i] + "\n";
         }
 
         return s;
