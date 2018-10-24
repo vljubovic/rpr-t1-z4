@@ -9,12 +9,18 @@ class PredmetTest {
 
     @Test
     void upisi() {
-        //Kako?
+        Student s = new Student("John", "Johnic", 111);
+        p.upisi(s);
+        assertEquals("1. Johnic John (111)\n", p.toString());
+        p.ispisi(s);
     }
 
     @Test
     void ispisi() {
-        //Kako?
+        Student s = new Student("John", "Johnic", 111);
+        p.upisi(s);
+        p.ispisi(s);
+        assertEquals("", p.toString());
     }
 
     @Test

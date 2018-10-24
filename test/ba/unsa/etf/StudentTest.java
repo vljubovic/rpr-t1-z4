@@ -13,4 +13,10 @@ class StudentTest {
         Student s = new Student("Buggs", "Bunny", 11109);
         assertEquals("Bunny Buggs (11109)", s.toString());
     }
+
+    @Test
+    void Studnet() {
+        Student s = new Student("Merry", "Johnic", 222);
+        assertEquals("Johnic Merry (222)", s.toString());
+    }
 }
