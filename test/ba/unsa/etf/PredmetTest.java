@@ -30,4 +30,9 @@ class PredmetTest {
         assertEquals("1. Prezime Ime (1)\n", p.toString());
         p.ispisi(s);
     }
+
+    @Test
+    void nazivPredmetaTest() {
+        assertEquals("RPR", p.getNazivPredmeta());
+    }
 }
