@@ -26,7 +26,7 @@ class PredmetTest {
     @Test
     void toStringTest() {
         Student s = new Student("Ime", "Prezime", 1);
-        p.upisi(s); // komentar
+        p.upisi(s); // komentar 3
         assertEquals("1. Prezime Ime (1)\n", p.toString());
         p.ispisi(s);
     }
